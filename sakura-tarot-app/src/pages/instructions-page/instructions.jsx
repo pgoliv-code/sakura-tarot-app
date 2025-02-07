@@ -7,7 +7,8 @@ function PageInstructions () {
         <>
         < Header/>
         <main className={styles.mainSection}>
-            <h1>Sakura Tarot</h1>
+            <h2>Instructions</h2>
+            <p>Lorem Ipsum</p>
         </main>
         </>
     )

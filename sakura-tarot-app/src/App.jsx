@@ -1,13 +1,13 @@
 // import { useState } from 'react'
-import PageInstructions from './pages/instructions-page/instructions'
 import './App.css'
+import PageWelcome from './pages/welcome-page/welcome'
 
 function App() {
 
   return (
-    <>
-      <PageInstructions/ >
-    </>
+    <div className='body-Style'>
+      <PageWelcome/ >
+    </div>
   )
 }
 
