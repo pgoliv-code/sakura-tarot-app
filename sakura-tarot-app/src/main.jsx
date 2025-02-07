@@ -1,10 +1,10 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import PageWelcome from './pages/welcome-page/welcome.jsx'
+import Router from './application/Router'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <PageWelcome />
+    <Router />
   </StrictMode>,
 )

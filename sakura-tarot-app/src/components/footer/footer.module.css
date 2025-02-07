@@ -1,0 +1,9 @@
+.footerStyle {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    bottom: 0%;
+    left: 0%;
+    position: fixed;
+    z-index: 99;
+}

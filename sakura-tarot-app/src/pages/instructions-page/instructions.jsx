@@ -1,3 +1,4 @@
+import FooterComp from '../../components/footer/footer'
 import Header from '../../components/header/header'
 import styles from './instructions.module.css'
 
@@ -10,6 +11,7 @@ function PageInstructions () {
             <h2>Instructions</h2>
             <p>Lorem Ipsum</p>
         </main>
+        < FooterComp/>
         </>
     )
 }
