@@ -19,6 +19,9 @@ function Router() {
 export default Router
 
 // LINK FOR COMPONENTS //
+
+//import { Link } from 'react-router';
+
 {/* <Link to="/join">
 <button className="Join-Now">Join Now</button>
 </Link> */}
