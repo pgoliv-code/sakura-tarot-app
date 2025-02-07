@@ -1,0 +1,11 @@
+.headerStyle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: fixed;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    margin-bottom: 1rem;
+    z-index: 99;
+}
