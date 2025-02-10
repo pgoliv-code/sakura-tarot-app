@@ -1,3 +1,4 @@
+import { Link } from 'react-router'
 import styles from './header.module.css'
 
 function Header () {
@@ -7,7 +8,9 @@ function Header () {
                 <p>Sakura Tarot</p>
             </div>
             <div className={styles.headerRight}>
+                <Link to="/">
                 <p>Salir</p>
+                </Link>
             </div>
         </header>
     )

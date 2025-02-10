@@ -1,9 +1,20 @@
+@font-face {
+  font-family: 'Macondo';
+  src: url("../src/assets/fonts/MacondoSwashCaps-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Macondo Regular';
+  src: url("../src/assets/fonts/Macondo-Regular.ttf") format("truetype");
+}
+
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-family: fantasy;
-  background-color: aquamarine;
+  background-image: url("../src/assets/images/background.webp");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  font-family: 'Macondo';
 }
-
