@@ -9,7 +9,7 @@ function Header () {
             </div>
             <div className={styles.headerRight}>
                 <Link to="/">
-                <p>Salir</p>
+                <p className={styles.linkExit}>Salir</p>
                 </Link>
             </div>
         </header>

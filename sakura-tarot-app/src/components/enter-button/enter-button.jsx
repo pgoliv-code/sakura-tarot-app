@@ -1,18 +1,18 @@
 import styles from './enter-button.module.css'
 import { Link } from 'react-router'
 
-function EnterButton () {
+
+function ButtonParent (props) {
 
 return (
     <>
-    <Link to="/instructions">
-    <button className={styles.buttonStyle}>
-    Enter
+    <Link to={props.link}>
+    <button className={styles.buttonStyle} >
+        {props.text}
     </button>
     </Link>
     </>
 )
-
 }
 
-export default EnterButton
+export default ButtonParent

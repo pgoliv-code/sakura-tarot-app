@@ -9,3 +9,7 @@
     margin-bottom: 1rem;
     z-index: 99;
 }
+
+.linkExit {
+    text-decoration: none;
+}

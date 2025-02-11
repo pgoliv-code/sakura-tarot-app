@@ -15,6 +15,8 @@ body {
   justify-content: center;
   background-image: url("../src/assets/images/background.webp");
   background-repeat: no-repeat;
-  background-size: 100% auto;
-  font-family: 'Macondo';
+  background-size: cover;
+  height: 100vh;
+  font-family: 'Macondo Regular';
+  margin: 0;
 }

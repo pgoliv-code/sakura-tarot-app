@@ -4,4 +4,9 @@
     justify-content: center;
     align-items: center;
     height: 35rem;
+    font-family: 'Macondo Regular'
+}
+
+.instructionsTitle{
+    font-family: 'Macondo';
 }

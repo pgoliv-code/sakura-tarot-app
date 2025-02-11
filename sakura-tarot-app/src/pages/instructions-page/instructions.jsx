@@ -8,7 +8,7 @@ function PageInstructions () {
         <>
         < Header/>
         <main className={styles.mainSection}>
-            <h2>Instructions</h2>
+            <h2 className={styles.instructionsTitle}>Instructions</h2>
             <p>Lorem Ipsum</p>
         </main>
         < FooterComp/>
