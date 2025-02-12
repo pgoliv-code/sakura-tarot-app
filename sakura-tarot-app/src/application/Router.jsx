@@ -1,8 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router"
 import App from "../App"
 import PageInstructions from "../pages/instructions-page/instructions"
-// import Discover from "../pages/discover/Discover"
-// import Join from "../pages/join/Join"
 
 
 function Router() {

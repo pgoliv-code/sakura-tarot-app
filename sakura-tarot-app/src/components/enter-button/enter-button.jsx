@@ -7,7 +7,7 @@ function ButtonParent (props) {
 return (
     <>
     <Link to={props.link}>
-    <button className={styles.buttonStyle} >
+    <button className={styles.buttonStyle} onClick={props.action ? props.action() : null}>
         {props.text}
     </button>
     </Link>
