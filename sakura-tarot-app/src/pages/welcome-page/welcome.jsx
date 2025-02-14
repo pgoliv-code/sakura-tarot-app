@@ -3,7 +3,6 @@ import sakuraCard from '../../assets/images/Reverso-Sakura.jpg'
 import ButtonParent from '../../components/enter-button/enter-button'
 import FormUseForm from '../../components/form-useForm/formUseForm'
 
-
 function PageWelcome () {
     // const {
     //     register, handleSubmit, formState:{ errors },
@@ -23,11 +22,6 @@ function PageWelcome () {
             
             <FormUseForm/>
 
-            < ButtonParent
-            text={"Entrar"}
-            link="/instructions"
-            // action={}
-            />
         </main>
         
         </>
