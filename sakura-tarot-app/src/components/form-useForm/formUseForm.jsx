@@ -6,38 +6,29 @@ import { useNavigate } from "react-router";
 function FormUseForm() {
 
     const {
-        register, handleSubmit, getValues, formState:{ errors },
+        register, handleSubmit, formState:{ errors },
     } = useForm({mode: 'onChange'});
 
     const navigate = useNavigate();
 
-    // const [username, setUsername] = useState('');
-    
-    // useEffect(() => {
-    //     localStorage.setItem('username', JSON.stringify(username))
-    // }, [username]);
+    const storedUsername = JSON.parse(localStorage.getItem('username'));
 
-    const usePersistForm = ({
-        value,
-        localStorageKey,
-    }) => {
-        useEffect(() => {
-            localStorage.setItem(localStorageKey, value);
-        }, [value, localStorageKey]);
-        return;
-    };
+    const [username, setUsername] = useState(storedUsername);
     
-    const onSubmit = (data) => {
-        console.log(data);
+    useEffect(() => {
+        localStorage.setItem('username', JSON.stringify(username));
+    }, [username])
         
-        navigate('/instructions');
-    };
-    
-    usePersistForm({ value: getValues().Username, localStorageKey: "username"});
+        const onSubmit = (data) => {
+            console.log(data); 
+            setUsername(data.Username);
+            navigate('/instructions');
+        };
 
-    return (
+
+        return (
         <>
-        <form className={styles.formCard} onSubmit={handleSubmit((onSubmit))}>
+        <form className={styles.formCard}>
             <input className={styles.inputForm} htmlFor="name" type="text" 
                 placeholder="Entra tu nombre" {...register("Username", {
                     required: {
@@ -53,7 +44,7 @@ function FormUseForm() {
                         message: '❌Solo se aceptan letras!❌',
                     }})} />
             {errors.Username && <span className={styles.spanError}>{errors.Username.message}</span>}
-            <input className={styles.submitButton} type="submit" value={'Registrar'}/>
+            <input className={styles.submitButton} type="submit" value={'Registrar'} onClick={handleSubmit(onSubmit)}/>
         </form>
         </>
     )
@@ -61,6 +52,23 @@ function FormUseForm() {
 
 export default FormUseForm
 
+
+
+//     const usePersistForm = ({
+//     value,
+//     localStorageKey,
+// }) => {
+//         useEffect(() => {
+//             localStorage.setItem(localStorageKey, JSON.stringify(value));
+//         }, [value, localStorageKey]);
+//         return;
+//     };
+
+    // usePersistForm({ value: getValues().Username, localStorageKey: "username"});
+
+
+
+// onSubmit={handleSubmit((onSubmit))}
 
 // onChange={(e) => setUsername(e.target.value)} required
 
