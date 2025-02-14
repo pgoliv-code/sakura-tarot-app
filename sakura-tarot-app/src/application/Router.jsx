@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router"
 import App from "../App"
 import PageInstructions from "../pages/instructions-page/instructions"
+import ReadingPage from "../pages/reading-page/reading"
 
 
 function Router() {
@@ -9,6 +10,7 @@ function Router() {
             <Routes>
                 <Route path="/" element={<App />}/>
                 <Route path="/instructions" element={<PageInstructions/>}/>
+                <Route path="/readings" element={<ReadingPage/>}/>
             </Routes>
         </BrowserRouter>
     )
