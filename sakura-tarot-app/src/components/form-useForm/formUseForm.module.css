@@ -1,0 +1,25 @@
+.inputForm {
+    background-color: antiquewhite;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.spanError {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8rem;
+}
+
+.formCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.submitButton {
+    height: 2rem;
+    width: 5rem;
+    background-color: coral;
+}

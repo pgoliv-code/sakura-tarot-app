@@ -8,6 +8,7 @@
     left: 0%;
     margin-bottom: 1rem;
     z-index: 99;
+    background-color: gray;
 }
 
 .linkExit {

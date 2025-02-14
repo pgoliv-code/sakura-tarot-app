@@ -1,6 +1,7 @@
 import ButtonParent from '../../components/enter-button/enter-button'
 import FooterComp from '../../components/footer/footer'
 import Header from '../../components/header/header'
+import PageWelcome from '../welcome-page/welcome'
 import styles from './instructions.module.css'
 
 function PageInstructions () {

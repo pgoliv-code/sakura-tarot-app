@@ -7,21 +7,20 @@ import {yupResolver} from '@hookform/resolvers/yup'
 function FormWelcome () {
 
 const schema = yup.object().shape({
-    name: yup.string().required(),
+   nameEntered: yup.string().min(1).max(20).required("Mínimo de 1 caracter, máximo de 20")
 })
 
-const { register, handleSubmit } = useForm({
+const { register, handleSubmit, formState: {errors} } = useForm({
     resolver: yupResolver(schema),
 });
 
-const onSubmit = (data) => {
-    console.log(data)
-}
+const onSubmit = (data) => {console.log(data) }
 
     return (
     <>
     <form className={styles.formCard} onSubmit={handleSubmit(onSubmit)}>
-        <input className={styles.formInput} type='text' placeholder='Nombre' {...register("name")}/>
+        <input className={styles.formInput} type='text' placeholder='Nombre' {...register("nameEntered", {required: true})}/>
+        <p>{errors.Name?.message}</p>
         <button onClick={onSubmit}>submit</button>
     </form>
     </>
@@ -29,6 +28,10 @@ const onSubmit = (data) => {
 }
 
 export default FormWelcome
+
+
+    // .matches(/^([0-9a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð '])+$/u,
+    //      'Solo se aceptan letras y números').required(),
 
 
 // import { data } from 'react-router';
